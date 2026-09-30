@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thanksgiving Market – Tables, desserts, séjours et décors</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito+Sans:wght@400;600;700&family=Caveat:wght@700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<style>
+:root{--green:#2f4a34;--sage:#7c9a6d;--rose:#d9a0a6;--rose-d:#a85d68;--beige:#f1e6d3;--beige2:#e8d9bf;--ink:#24301f;--bg:#faf4e8;--card:#fffaf0;--line:#dccfb3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Nunito Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--green);color:#f7efe0}
+nav .wrap{display:flex;align-items:center;gap:18px;height:56px;overflow-x:auto}
+nav b{font-family:Fraunces,serif;font-size:20px;white-space:nowrap;margin-right:auto}
+nav a{text-decoration:none;font-weight:600;font-size:15px;white-space:nowrap}
+#cartBtn{background:var(--rose);color:#3a1d22;border:0;border-radius:99px;padding:8px 16px;font:700 15px inherit;font-family:inherit;cursor:pointer;white-space:nowrap}
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;color:#fff;background:#2f4a34 center/cover}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,45,30,.25),rgba(30,45,30,.85))}
+.hero .wrap{position:relative;padding-bottom:56px}
+.hero h1{font-size:clamp(40px,7vw,80px);max-width:12ch}
+.hero p{max-width:52ch;font-size:19px;margin:16px 0 24px}
+.btn{display:inline-block;background:var(--rose);color:#3a1d22;padding:12px 22px;border-radius:99px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-family:inherit;font-size:16px}
+.btn.g{background:var(--green);color:#f7efe0}
+section{padding:64px 0}
+h2{font-size:clamp(28px,4vw,42px);margin-bottom:12px}
+.lead{max-width:62ch;margin-bottom:28px}
+.about{background:var(--beige)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:24px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.box h3{font-size:21px;margin-bottom:8px;color:var(--green)}
+.time{display:grid;gap:0;margin-top:28px;border-left:3px solid var(--sage);padding-left:20px}
+.time div{padding:0 0 18px;max-width:70ch}.time b{font-family:Fraunces,serif;font-size:20px;color:var(--rose-d)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px}
+.tabs button{border:1.5px solid var(--sage);background:transparent;color:var(--ink);border-radius:99px;padding:8px 16px;font:600 15px inherit;font-family:inherit;cursor:pointer}
+.tabs button.on{background:var(--green);border-color:var(--green);color:#f7efe0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.p{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 10px 16px;display:flex;flex-direction:column}
+.p .ph{height:170px;border-radius:9px;overflow:hidden;background:var(--beige2);border:4px solid var(--beige)}
+.p img{width:100%;height:100%;object-fit:cover;display:block}
+.p .tag{color:var(--sage);font-weight:700;font-size:13px;margin:12px 6px 0}
+.p h3{font-size:18px;margin:2px 6px 4px}
+.p p{font-size:14.5px;line-height:1.45;margin:0 6px 10px;flex:1}
+.pr{margin:0 6px 12px;font-weight:700}.pr small{display:block;font-weight:600;color:var(--rose-d)}
+.p .btn{margin:0 6px;padding:9px 14px;font-size:15px}
+.head{max-width:64ch;margin-bottom:28px}.head h2{margin-bottom:10px}.head p{margin:0}
+.head.sub{margin:44px 0 20px}.head.sub h2{font-size:clamp(24px,3vw,30px)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.st{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--sage);border-radius:14px;padding:18px 20px}
+.st span{font:700 26px Fraunces,Georgia,serif;color:var(--rose-d)}
+.st h3{font-size:19px;margin:2px 0 8px;color:var(--green)}.st p,.box p{margin:0;font-size:15.5px;line-height:1.55}
+.ci{margin:-8px 0 24px;max-width:64ch;color:var(--rose-d);font-weight:600}
+.deco .head p{color:#efe3cd}
+.deco{background:var(--green);color:#f7efe0}
+.deco .lead{color:#efe3cd}
+footer{background:var(--ink);color:#e8dcc6;padding:32px 0;font-size:14px}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(400px,100%);background:var(--card);z-index:9;transform:translateX(105%);transition:transform .25s;box-shadow:-8px 0 30px rgba(0,0,0,.25);padding:calc(20px + env(safe-area-inset-top,0px)) 20px calc(20px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column}
+#drawer.open{transform:none}
+#items{flex:1;overflow:auto}
+.it{display:flex;gap:10px;justify-content:space-between;border-bottom:1px solid var(--line);padding:10px 0;font-size:15px}
+.it button{border:1px solid var(--line);background:none;color:var(--ink);border-radius:6px;width:26px;cursor:pointer}
+.tot{font-weight:700;padding:12px 0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#drawer{transition:none}}
+:focus-visible{outline:3px solid var(--rose-d);outline-offset:2px}
+
+#bar{position:fixed;top:0;left:0;height:4px;width:0;background:var(--rose);z-index:20}
+nav{transition:box-shadow .3s}nav.s{box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.hero{overflow:hidden;min-height:92vh}
+.hero:before{z-index:1}.hero .wrap{z-index:2}
+.hbg{position:absolute;inset:0;background:#2f4a34 center/cover;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.16) translate(-1.5%,-1%)}}
+.leaves{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.leaves span{position:absolute;top:0;opacity:.85;animation:fall linear infinite}
+@keyframes fall{0%{transform:translate(0,-12vh) rotate(0)}50%{transform:translate(44px,52vh) rotate(180deg)}100%{transform:translate(-24px,115vh) rotate(360deg)}}
+.hero h1{text-shadow:0 4px 30px rgba(0,0,0,.45);font-size:clamp(46px,9vw,104px)}
+.w{display:inline-block;opacity:0;transform:translateY(46px) rotate(4deg);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*170ms + 250ms)}
+@keyframes up{to{opacity:1;transform:none}}
+.hero p,.hero .btn,.stats{opacity:0;animation:up .9s 1s cubic-bezier(.2,.7,.2,1) forwards}
+.stats{display:flex;gap:38px;margin-top:38px;animation-delay:1.3s}
+.stats b{display:block;font:700 44px/1 Fraunces,Georgia,serif;color:var(--rose)}.stats span{font-size:14px}
+.hero .btn:after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:sh 3.8s 2s infinite}
+@keyframes sh{to{left:140%}}
+.btn{position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,.22)}
+.marq{background:var(--rose);color:#3a1d22;overflow:hidden;white-space:nowrap;padding:14px 0;font:700 20px Fraunces,Georgia,serif;transform:rotate(-1deg);margin:-14px -10px 0;position:relative;z-index:3}
+.marq .track{display:inline-block;animation:mq 34s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.about{position:relative;padding-top:86px}
+.about:after{content:"";position:absolute;left:0;right:0;bottom:-27px;height:28px;background:radial-gradient(circle at 14px 0,var(--beige) 14px,transparent 15px) 0 0/28px 28px repeat-x}
+#boutique{padding-top:100px}
+.head h2:after{content:"";display:block;height:5px;width:0;background:var(--rose);border-radius:5px;margin-top:12px;transition:width .9s .35s ease}
+.head.in h2:after{width:84px}
+.rv{opacity:0;transform:translateY(34px) scale(.96);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1),box-shadow .3s,border-color .3s}
+.rv.in{opacity:1;transform:none}
+.box,.st{transition:transform .3s,box-shadow .3s,border-color .3s}
+.box.in:hover,.st.in:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(47,74,52,.18)}
+.st:hover{border-top-color:var(--rose)}
+.tabs button{transition:all .25s}.tabs button:hover{transform:translateY(-3px);border-color:var(--rose-d)}
+.p{position:relative;overflow:hidden}
+.p.in:hover{transform:translateY(-8px);box-shadow:0 20px 36px rgba(47,74,52,.24);border-color:var(--rose)}
+.p img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}.p:hover img{transform:scale(1.12)}
+.p .tag{display:inline-block;align-self:flex-start;background:var(--rose);color:#3a1d22;border-radius:99px;padding:2px 12px;font-size:12px;margin:12px 6px 4px}
+.pr{font-size:20px;color:var(--green)}
+.deco{position:relative;padding:120px 0;background:linear-gradient(rgba(47,74,52,.88),rgba(47,74,52,.88)),var(--deco) center/cover fixed}
+.deco:before{content:"";position:absolute;top:-1px;left:0;right:0;height:28px;background:radial-gradient(circle at 14px 0,var(--bg) 14px,transparent 15px) 0 0/28px 28px repeat-x}
+.deco h2{font-size:clamp(34px,5vw,56px)}
+#bk{position:fixed;inset:0;background:rgba(20,30,20,.55);opacity:0;pointer-events:none;transition:opacity .3s;z-index:8}#bk.on{opacity:1;pointer-events:auto}
+.pop{animation:pop .55s}
+@keyframes pop{30%{transform:scale(1.25) rotate(-4deg)}60%{transform:scale(.95)}100%{transform:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.rv,.w,.hero p,.hero .btn,.stats{opacity:1;transform:none}.head h2:after{width:84px}}
+
+nav a{position:relative}nav a.act:after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:3px;background:var(--rose);border-radius:3px}
+.cd{gap:30px;flex-wrap:wrap}.cdb em{display:block;font:600 14px "Nunito Sans",sans-serif;font-style:normal;margin-bottom:6px}
+.cd .tm{font-size:15px;display:flex;align-items:baseline;gap:5px}.cd b{display:inline;font-size:36px;min-width:1.3ch}
+.fav{display:grid;gap:64px}.f{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center}.f:nth-child(even) .fi{order:2}
+.fi{height:360px;border-radius:18px;overflow:hidden;border:6px solid var(--beige);box-shadow:0 22px 44px rgba(47,74,52,.25);transition:transform .25s}
+.fi img{width:100%;height:100%;object-fit:cover;display:block}
+.ft h3{font-size:clamp(26px,3.2vw,38px);margin:8px 0 10px}.ft p{max-width:44ch;margin:0}
+.f .tag{display:inline-block;background:var(--rose);color:#3a1d22;border-radius:99px;padding:2px 12px;font-size:13px;font-weight:700}
+.ft .pr{font-size:24px;margin:16px 0}
+.steps2{background:var(--beige)}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;text-align:center}
+.flow:before{content:"";position:absolute;top:29px;left:17%;right:17%;height:3px;background:repeating-linear-gradient(90deg,var(--sage) 0 10px,transparent 10px 20px)}
+.fs i{display:grid;place-items:center;width:58px;height:58px;margin:0 auto 14px;border-radius:50%;background:var(--rose);color:#3a1d22;font:700 26px Fraunces,Georgia,serif;font-style:normal;position:relative;animation:pl 2.6s infinite}
+@keyframes pl{0%{box-shadow:0 0 0 0 rgba(217,160,166,.75)}70%,100%{box-shadow:0 0 0 20px rgba(217,160,166,0)}}
+.fs h3{font-size:21px;margin-bottom:6px}.fs p{margin:0 auto;max-width:28ch;font-size:15.5px}
+.marq.g{background:var(--green);color:#f1e6d3;transform:rotate(1deg);margin:40px -10px 0}.marq.g .track{animation-direction:reverse}
+.p .ph{cursor:zoom-in}
+#md{position:fixed;inset:0;background:rgba(20,30,20,.72);display:flex;align-items:center;justify-content:center;padding:20px;z-index:12;opacity:0;pointer-events:none;transition:opacity .3s}#md.on{opacity:1;pointer-events:auto}
+.mc{background:var(--card);border-radius:18px;max-width:820px;width:100%;display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden;position:relative;transform:scale(.85) translateY(30px);transition:transform .45s cubic-bezier(.2,.9,.3,1.2)}#md.on .mc{transform:none}
+.mc img{width:100%;height:100%;min-height:340px;object-fit:cover;display:block}.mt{padding:28px;display:flex;flex-direction:column;gap:10px;justify-content:center;align-items:flex-start}
+.mt .tag{background:var(--rose);color:#3a1d22;border-radius:99px;padding:2px 12px;font-size:13px;font-weight:700}.mt h3{font-size:28px}.mt p{margin:0}.mt .pr{font-size:22px;margin:6px 0}
+.x{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;border:0;background:var(--bg);color:var(--ink);cursor:pointer;font-size:16px}
+.fly{position:fixed;width:22px;height:22px;margin:-11px;border-radius:50%;background:var(--rose);z-index:30;pointer-events:none;transition:transform .75s cubic-bezier(.5,-.3,.8,.5),opacity .75s}
+#ts{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140px);background:var(--green);color:#f7efe0;padding:12px 22px;border-radius:99px;z-index:40;font-weight:600;font-size:15px;transition:transform .45s cubic-bezier(.2,.9,.3,1.3);max-width:92vw;text-align:center}#ts.on{transform:translate(-50%,0)}
+.cf{position:fixed;bottom:0;z-index:40;font-size:26px;pointer-events:none;animation:cf 2.2s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes cf{0%{transform:translate(0,0) rotate(0)}60%{transform:translate(var(--x),var(--y)) rotate(200deg);opacity:1}100%{transform:translate(var(--x),40vh) rotate(420deg);opacity:0}}
+@media(max-width:760px){.f{grid-template-columns:1fr;gap:18px}.f:nth-child(even) .fi{order:0}.fi{height:240px}.flow{grid-template-columns:1fr}.flow:before{display:none}.mc{grid-template-columns:1fr}.mc img{min-height:200px;height:220px}}
+
+.en{font-family:Caveat,cursive;font-size:28px;color:var(--rose)}
+.head[data-en]:before{content:attr(data-en);display:block;font:700 34px Caveat,cursive;color:var(--rose-d);transform:rotate(-2deg);transform-origin:left;margin-bottom:2px}
+.deco .head[data-en]:before{color:var(--rose)}
+.en2{display:block;font:italic 500 14.5px/1.2 "Playfair Display",Georgia,serif;color:var(--rose-d);margin:0 6px 8px}.ft .en2{margin:0 0 12px;font-size:19px}
+.eyebrow{font:700 clamp(28px,4.4vw,44px) Caveat,cursive;color:var(--rose);transform:rotate(-3deg);transform-origin:left;margin-bottom:4px;animation:fin 1.3s .2s both}
+@keyframes fin{from{opacity:0;letter-spacing:.35em}}
+.spot{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(520px circle at var(--mx,50%) var(--my,65%),rgba(217,160,166,.3),transparent 62%)}
+.giant{position:absolute;left:0;bottom:-.2em;z-index:1;white-space:nowrap;font:700 20vw/1 Fraunces,Georgia,serif;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.2);pointer-events:none;animation:gs 46s linear infinite}
+@keyframes gs{to{transform:translateX(-50%)}}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:16px}
+.vc{perspective:900px;height:150px;cursor:pointer}
+.vi{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d}.vc.on .vi{transform:rotateY(180deg)}
+.vf,.vb{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:1px solid var(--line)}
+.vf{background:var(--card)}.vf span{font-size:34px}.vf b{font:700 20px Fraunces,Georgia,serif}
+.vb{background:var(--green);color:#f7efe0;transform:rotateY(180deg);font:700 20px Fraunces,Georgia,serif;text-align:center;padding:10px}
+.sp{border:0;background:var(--rose);border-radius:50%;width:32px;height:32px;cursor:pointer;margin-top:2px}
+.quiz{margin:44px auto 0;background:var(--green);color:#f7efe0;border-radius:22px;padding:34px 26px;max-width:640px;text-align:center}
+.quiz h3{font-size:26px;margin:8px 0}.qh{color:var(--rose);font-weight:700}.qo{display:grid;gap:10px;margin:18px 0 6px}
+.qo button{padding:13px;border-radius:12px;border:2px solid rgba(255,255,255,.35);background:transparent;color:inherit;font:700 18px "Nunito Sans",sans-serif;cursor:pointer;transition:all .2s}
+.qo button:hover{background:rgba(255,255,255,.12);transform:scale(1.02)}.qo button.ok{background:var(--sage);border-color:var(--sage);color:#14200f}
+.qo button.ko{background:var(--rose-d);border-color:var(--rose-d);color:#fff;animation:shk .4s}
+@keyframes shk{25%{transform:translateX(-9px)}75%{transform:translateX(9px)}}
+
+:root{--green:#4a7455;--ink:#38452f;--bg:#fbf5ea;--card:#fffaf1;--line:#e6d9bd}
+html{color-scheme:light}
+nav{background:rgba(251,245,234,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--green);border-bottom:1px solid var(--line)}
+nav b{color:var(--green)}nav a{color:#4d6d52}
+.hero{min-height:86vh}
+.hero:before{background:linear-gradient(180deg,rgba(255,236,214,.06) 0%,rgba(74,116,85,.4) 55%,rgba(60,96,72,.74) 100%)}
+.deco{background:linear-gradient(135deg,rgba(74,116,85,.84),rgba(168,93,104,.72)),var(--deco) center/cover fixed}
+.quiz{background:linear-gradient(135deg,#7aa06f,#4f7c5b)}
+.vb{background:#5f8a63}.marq.g{background:#6f9463}
+footer{background:#e4ecd8;color:var(--green)}footer .en{color:var(--rose-d)}
+.fi{height:330px}
+body.lock{overflow:hidden}
+body:not(.in) .w,body:not(.in) .hero p,body:not(.in) .hero .btn,body:not(.in) .stats,body:not(.in) .eyebrow{animation-play-state:paused}
+#splash{position:fixed;inset:0;z-index:100;display:grid;place-items:center;text-align:center;padding:20px;background:radial-gradient(circle at 25% 20%,#fbdcd8,transparent 55%),radial-gradient(circle at 80% 85%,#dcebc9,transparent 55%),#fbf5ea;transition:transform 1.1s cubic-bezier(.7,0,.2,1),opacity .5s .6s}
+#splash.out{transform:translateY(-100%);opacity:0;pointer-events:none}
+.sp-en{font:700 clamp(50px,11vw,120px)/1 Caveat,cursive;color:var(--rose-d);animation:spi 1.2s both}
+.sp-fr{font-size:clamp(24px,5vw,42px);color:var(--green);margin:8px 0 12px;animation:spi 1.2s .3s both}
+#splash p{margin:0 0 22px;animation:spi 1.2s .6s both}#splash .btn{font-size:18px;padding:14px 30px;animation:spi 1.2s .9s both}
+.lnk{display:block;margin:16px auto 0;background:none;border:0;color:var(--green);text-decoration:underline;cursor:pointer;font:600 15px "Nunito Sans",sans-serif;animation:spi 1.2s 1.1s both}
+@keyframes spi{from{opacity:0;transform:translateY(34px)}}
+#snd{display:flex;align-items:flex-end;gap:3px;height:36px;width:42px;border-radius:99px;border:1.5px solid var(--sage);background:transparent;cursor:pointer;padding:10px 12px;flex:none}
+#snd i{flex:1;background:var(--rose-d);border-radius:2px;height:25%;transition:height .3s}
+#snd.on i{animation:eq .9s ease-in-out infinite alternate}#snd.on i:nth-child(2){animation-delay:.25s}#snd.on i:nth-child(3){animation-delay:.5s}
+@keyframes eq{from{height:20%}to{height:100%}}
+#cur{display:none}
+@media(pointer:fine){#cur{display:block;position:fixed;left:-50px;top:-50px;width:34px;height:34px;border:2px solid var(--rose-d);border-radius:50%;pointer-events:none;z-index:200;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}#cur.h{width:64px;height:64px;background:rgba(217,160,166,.3)}}
+
+@keyframes fill{to{width:100%}}
+.story{position:relative;height:min(560px,82vh);min-height:470px;border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px rgba(74,116,85,.18);margin-top:8px;background:var(--card)}
+.sslides{position:absolute;inset:0}
+.sl{position:absolute;inset:0;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px;padding:64px 64px 44px;clip-path:circle(0% at 80% 55%);z-index:0;transition:clip-path 1.1s cubic-bezier(.7,0,.2,1)}
+.sl:nth-child(odd){background:linear-gradient(135deg,#fdebe6,#f6ecd6)}.sl:nth-child(even){background:linear-gradient(135deg,#e6f0d8,#f6ecd6)}
+.sl.prev{clip-path:circle(150% at 80% 55%);z-index:1}.sl.on{clip-path:circle(150% at 80% 55%);z-index:2}
+.sl .a{opacity:0}.sl.on .a{animation:sin .9s both}.sl.on .a1{animation-delay:.55s}.sl.on .a2{animation-delay:.75s}.sl.on .a3{animation-delay:.95s}.sl.on .a4{animation-delay:1.15s}
+.sy{font:700 clamp(70px,12vw,150px)/.9 Fraunces,Georgia,serif;color:transparent;-webkit-text-stroke:2px var(--rose);margin-bottom:6px}.sy.s{font-size:clamp(46px,8vw,92px)}
+.sl h3{font-size:clamp(28px,4vw,46px);color:var(--green);margin:2px 0 10px}.sl p{font-size:18px;max-width:46ch;margin:0}
+.sc2{border:6px solid #fffaf1;border-radius:18px;overflow:hidden;box-shadow:0 22px 44px rgba(74,116,85,.25);height:min(340px,42vh);transform:rotate(-3deg) scale(.9);transition:transform 1.3s cubic-bezier(.2,.8,.2,1) .5s}
+.sl.on .sc2{transform:rotate(2deg) scale(1)}
+.sc2 img{width:100%;height:100%;object-fit:cover;display:block}.sl.on .sc2 img{animation:kb2 8s ease-out both}
+@keyframes kb2{from{transform:scale(1.18)}to{transform:scale(1)}}
+.sbars{position:absolute;top:16px;left:22px;right:22px;display:flex;gap:6px;z-index:5}
+.sbars i{flex:1;height:5px;border-radius:5px;background:rgba(74,116,85,.18);overflow:hidden}.sbars i b{display:block;height:100%;width:0;background:var(--rose-d)}
+.sbars i.done b{width:100%}.sbars i.on b{animation:fill 8s linear forwards}.story.pz .sbars i.on b{animation-play-state:paused}
+.sn{position:absolute;top:50%;z-index:5;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.88);color:var(--green);font-size:28px;line-height:1;cursor:pointer;transform:translateY(-50%);box-shadow:0 6px 16px rgba(0,0,0,.14);transition:transform .2s}.sn:hover{transform:translateY(-50%) scale(1.12)}
+.pv{left:12px}.nx{right:12px}
+.spause{position:absolute;bottom:14px;right:18px;z-index:5;border:0;background:rgba(255,255,255,.88);color:var(--green);border-radius:99px;padding:7px 14px;cursor:pointer;font:700 13px "Nunito Sans",sans-serif}
+.vit{padding:40px 0 20px}
+.rail{overflow:hidden;margin-top:18px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.rt{display:flex;width:max-content;animation:mq 75s linear infinite}.rail.rev .rt{animation-direction:reverse}.rail:hover .rt{animation-play-state:paused}
+.mini{flex:none;width:210px;margin-right:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px 8px 12px;text-align:left;cursor:pointer;font-family:inherit;color:var(--ink);transition:transform .3s,box-shadow .3s}
+.mini:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:0 14px 28px rgba(74,116,85,.2)}
+.mini img{width:100%;height:120px;object-fit:cover;border-radius:9px;display:block}.mini span{display:block;font:700 15px Fraunces,Georgia,serif;margin:8px 4px 2px}.mini b{font-size:13px;color:var(--rose-d);margin-left:4px}
+#splash{background:none}
+#splash:before,#splash:after{content:"";position:absolute;top:0;bottom:0;width:50.2%;transition:transform 1.3s cubic-bezier(.75,0,.2,1)}
+#splash:before{left:0;background:radial-gradient(circle at 20% 20%,#fbdcd8,transparent 60%),#fbeee0}
+#splash:after{right:0;background:radial-gradient(circle at 80% 85%,#dcebc9,transparent 60%),#f4ecd8}
+#splash>div{position:relative;z-index:2;transition:opacity .6s,transform 1s}
+#splash.out{transform:none;opacity:0;visibility:hidden;transition:opacity .2s 1.4s,visibility 0s 1.6s}
+#splash.out:before{transform:translateX(-101%)}#splash.out:after{transform:translateX(101%)}#splash.out>div{opacity:0;transform:scale(1.35)}
+.ld{width:min(320px,70vw);height:6px;border-radius:6px;background:rgba(74,116,85,.15);margin:0 auto 10px;overflow:hidden}
+.ld i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--sage),var(--rose));animation:fill 2.6s .3s ease-in-out forwards}
+#lm{display:block;margin-bottom:24px;font:italic 500 16px "Playfair Display",Georgia,serif;color:var(--rose-d)}
+#splash .btn{animation-delay:2.9s}.lnk{animation-delay:3.1s}
+.bst{position:fixed;left:50%;top:50%;z-index:150;font-size:28px;pointer-events:none;animation:bst 1.7s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes bst{to{transform:translate(var(--x),var(--y)) rotate(540deg) scale(.6);opacity:0}}
+@media(max-width:760px){.story{height:660px}.sl{grid-template-columns:1fr;align-content:center;gap:14px;padding:56px 24px 40px}.sc2{order:-1;height:190px;max-width:290px;margin:0 auto}.sl p{font-size:16px}.sy{font-size:clamp(46px,16vw,80px)}.sy.s{font-size:clamp(38px,12vw,60px)}}
+
+@keyframes sin{from{opacity:0;translate:0 34px}to{opacity:1;translate:0 0}}
+@media(prefers-reduced-motion:reduce){.sl .a{opacity:1}.sl{transition:none}}
+.sl>*{position:relative;z-index:1}
+.sl:before,.sl:after{position:absolute;opacity:.28;animation:bob 6s ease-in-out infinite alternate;pointer-events:none}
+.sl:before{content:"🍁";font-size:70px;right:5%;bottom:7%}.sl:after{content:"🍂";font-size:46px;left:3%;top:20%;animation-delay:-3s}
+@keyframes bob{to{transform:translateY(-20px) rotate(16deg)}}
+.tree{background:linear-gradient(180deg,var(--bg),#f3ecd9)}
+.tv{position:relative;max-width:640px;margin:10px auto 0}.tv svg{width:100%;display:block}
+.lf{position:absolute;background:#fffaf1;border:1px solid var(--line);border-radius:99px;padding:4px 12px;font:700 14px "Nunito Sans",sans-serif;color:var(--green);box-shadow:0 4px 12px rgba(74,116,85,.2);white-space:nowrap;max-width:80%;overflow:hidden;text-overflow:ellipsis;transform:translate(-50%,-50%) rotate(var(--r,0deg));animation:drop 1.2s cubic-bezier(.3,1.4,.5,1) both,sway 4s ease-in-out infinite alternate 1.2s}
+@keyframes drop{from{opacity:0;transform:translate(-50%,-420%) rotate(-50deg) scale(.6)}to{opacity:1;transform:translate(-50%,-50%) rotate(var(--r,0deg))}}
+@keyframes sway{from{translate:0 0}to{translate:0 6px}}
+.tf{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.tf input{flex:1;min-width:220px;max-width:360px;padding:12px 20px;border-radius:99px;border:2px solid var(--sage);background:var(--card);font:600 16px "Nunito Sans",sans-serif;color:var(--ink)}
+</style>
+</head>
+<body class="lock"><div id="splash"><div><div class="sp-en">Happy Thanksgiving</div><h2 class="sp-fr">Bienvenue à la fête</h2><p>Pour l'ambiance, mettez le son : musique d'automne et crépitement du feu.</p><div class="ld"><i></i></div><small id="lm">Preparing the feast…</small><button class="btn" id="go">Entrer avec le son 🔊</button><button class="lnk" id="nogo">Entrer sans le son</button></div></div><div id="cur"></div><div id="ts" role="status"></div><div id="bar"></div><div id="bk" onclick="tog()"></div>
+<nav><div class="wrap"><b>Thanksgiving Market</b><a href="#histoire">La fête</a><a href="#favoris">Coups de cœur</a><a href="#boutique">Boutique</a><a href="#english">English Corner</a><a href="#arbre">Gratitude</a><a href="#etapes">Commander</a><a href="#decor">Décor</a><button id="snd" aria-label="Activer ou couper le son"><i></i><i></i><i></i></button><button id="cartBtn" onclick="tog()">Panier (<span id="n">0</span>)</button></div></nav>
+
+<header class="hero" id="hero"><div class="hbg" id="hbg"></div><div class="leaves" id="leaves"></div><div class="spot" id="spot"></div><div class="giant" aria-hidden="true">Thanks · Thanks · Thanks · Thanks · Thanks · Thanks ·&nbsp;Thanks · Thanks · Thanks · Thanks · Thanks · Thanks ·</div><div class="wrap">
+<div class="eyebrow">Happy Thanksgiving, y'all!</div><h1>Joyeux Thanksgiving !</h1>
+<p>Thanksgiving est la fête de la gratitude, célébrée chaque automne en famille aux États-Unis et au Canada. Découvrez son histoire, puis préparez la fête avec nous.</p>
+<a class="btn" href="#boutique">Voir la boutique</a>
+<div class="stats cd"><div class="cdb"><em>Canada · lundi 12 octobre</em><div class="tm" data-t="2026-10-12T00:00:00"><b>0</b>j <b>0</b>h <b>0</b>min <b>0</b>s</div></div><div class="cdb"><em>États-Unis · jeudi 26 novembre</em><div class="tm" data-t="2026-11-26T00:00:00"><b>0</b>j <b>0</b>h <b>0</b>min <b>0</b>s</div></div></div></div></header>
+<div class="marq" aria-hidden="true"><div class="track" id="track"></div></div>
+
+<section class="about" id="histoire"><div class="wrap">
+<div class="head" data-en="Give thanks"><h2>Thanksgiving, la fête de la gratitude</h2><p>On remercie pour les récoltes et on se réunit en famille autour d'un grand repas. La fête est célébrée aux États-Unis et au Canada, à des dates différentes.</p></div>
+<div class="story" id="story" aria-label="Histoire de Thanksgiving en diaporama"><div class="sbars" id="sbars"></div><div class="sslides" id="sslides"></div><button class="sn pv" id="spv" aria-label="Précédent">‹</button><button class="sn nx" id="snx" aria-label="Suivant">›</button><button class="spause" id="spa" aria-label="Pause ou lecture">❚❚ Pause</button></div>
+</div></section>
+
+<section class="vit" id="vitrine"><div class="wrap"><div class="head" data-en="Fresh off the table"><h2>En vitrine</h2><p>Un aperçu de la boutique, qui défile en continu. Touchez un produit pour le découvrir.</p></div></div><div class="rail"><div class="rt" id="r1"></div></div><div class="rail rev"><div class="rt" id="r2"></div></div></section>
+
+<section id="favoris"><div class="wrap"><div class="head" data-en="Our all-time favorites"><h2>Nos coups de cœur</h2><p>Trois choix pour vivre Thanksgiving à fond : la table, le dessert et le séjour.</p></div><div class="fav" id="fav"></div></div></section>
+
+<section id="boutique"><div class="wrap">
+<div class="head" data-en="Let's go shopping!"><h2>La boutique</h2><p>Choisissez une catégorie. Prix en dollars américains (USD) et canadiens (CAD) ; logements à la nuit, services par prestation.</p></div>
+<div class="tabs" id="tabs"></div>
+<p class="ci" id="ci"></p>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section id="english"><div class="wrap"><div class="head" data-en="Let's play with words!"><h2>Le coin d'anglais</h2><p>Thanksgiving se raconte aussi en anglais. Touchez une carte pour la retourner, écoutez le mot, puis testez-vous.</p></div><div class="cards" id="cards"></div><div class="quiz" id="quiz"></div></div></section>
+
+<section class="tree" id="arbre"><div class="wrap"><div class="head" data-en="What are you thankful for?"><h2>L'arbre de gratitude</h2><p>Écrivez ce dont vous êtes reconnaissant : votre feuille se pose sur l'arbre.</p></div>
+<div class="tv" id="tv"><svg viewBox="0 0 600 420" aria-hidden="true"><path d="M282 420C290 340 282 280 268 225L332 225C318 280 310 340 320 420Z" fill="#b98f6a"/><path d="M300 300C262 272 232 262 202 232" stroke="#b98f6a" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M300 282C340 252 380 242 410 207" stroke="#b98f6a" stroke-width="10" fill="none" stroke-linecap="round"/><circle cx="300" cy="140" r="122" fill="#cfe1bd"/><circle cx="190" cy="185" r="86" fill="#f3c9c9"/><circle cx="410" cy="185" r="86" fill="#dcebc9"/><circle cx="250" cy="92" r="70" fill="#f7d9c4"/><circle cx="360" cy="96" r="72" fill="#f3c9c9"/></svg></div>
+<div class="tf"><input id="ti" maxlength="40" placeholder="Je suis reconnaissant pour…" aria-label="Votre message de gratitude"><button class="btn" id="tb">Ajouter ma feuille 🍂</button></div></div></section>
+
+<section class="steps2" id="etapes"><div class="wrap"><div class="head" data-en="Easy as pie"><h2>Commander en trois étapes</h2><p>Simple et rapide, du choix au jour de la fête.</p></div><div class="flow">
+<div class="fs"><i>1</i><h3>Choisissez</h3><p>Parcourez la boutique : plats, desserts, boissons, logements et décors.</p></div>
+<div class="fs"><i>2</i><h3>Ajoutez au panier</h3><p>Le total s'affiche en USD et en CAD à chaque ajout.</p></div>
+<div class="fs"><i>3</i><h3>Célébrez</h3><p>Réunissez vos proches et profitez de la fête.</p></div>
+</div></div></section>
+
+<section class="deco" id="decor"><div class="wrap">
+<div class="head" data-en="Fall in love with fall"><h2>Décoration et accessoires</h2><p>Couronnes, citrouilles, bottes de paille et chrysanthèmes : nous habillons votre porche et votre table aux couleurs de l'automne.</p></div>
+<a class="btn" href="#boutique" onclick="setCat('Décoration')">Voir les services de décoration</a>
+</div></section>
+
+<div class="marq g" aria-hidden="true"><div class="track" id="track2"></div></div>
+<footer><div class="wrap"><b class="en">Thanks for stopping by!</b><br>Thanksgiving Market · Prix CAD calculés au taux de 1 USD = <span id="rt"></span> CAD (taux indicatif). Paiement non activé : le panier sert à préparer votre commande.</div></footer>
+
+<div id="md" onclick="if(event.target==this)cm()"><div class="mc"><button class="x" onclick="cm()" aria-label="Fermer">✕</button><img id="mi" alt=""><div class="mt"><span class="tag" id="mg"></span><h3 id="mh"></h3><p id="mp"></p><div class="pr" id="mr"></div><button class="btn" id="ma">Ajouter au panier</button></div></div></div>
+<aside id="drawer" aria-label="Panier">
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 style="font-size:26px;margin:0">Votre panier</h2><button class="btn g" onclick="tog()" aria-label="Fermer">Fermer</button></div>
+<div id="items"></div>
+<div class="tot" id="tot"></div>
+<button class="btn" onclick="party()">Passer la commande</button>
+</aside>
+
+<script>
+var IMG={"appart": "images/appart.jpg", "deco": "images/deco.jpg", "jus": "images/jus.jpg", "boissons": "images/boissons.jpg", "gateau": "images/gateau.jpg", "dessert": "images/dessert.jpg", "fruits": "images/fruits.jpg", "buffet": "images/buffet.jpg", "lo": "images/lo.jpg", "vin": "images/vin.jpg", "dessert2": "images/dessert2.jpg", "gateau2": "images/gateau2.jpg", "diner": "images/diner.jpg", "appart2": "images/appart2.jpg", "appartement": "images/appartement.jpg"};
+var EN={"Dinde rôtie farcie":"Stuffed roast turkey","Buffet complet Thanksgiving":"Full Thanksgiving feast","Purée et haricots verts":"Mashed potatoes & green beans","Farce aux herbes":"Herb stuffing","Menu dîner pour deux":"Dinner for two","Sauce aux canneberges":"Cranberry sauce","Trifle épicé au speculoos":"Spiced cookie trifle","Mini-gâteaux chocolat et caramel":"Chocolate caramel cupcakes","Tarte à la citrouille":"Pumpkin pie","Muffins aux noix et canneberges":"Walnut cranberry muffins","Cocktails d'automne (x4)":"Fall cocktails","Sangria festive orange-canneberge":"Festive orange cranberry sangria","Vins de table (2 bouteilles)":"Table wines","Panier de fruits d'automne":"Autumn fruit basket","Chalet avec vue sur la montagne":"Mountain view cabin","Chalet d'automne au bord du lac":"Lakeside fall cabin","Tipi au bord de l'eau":"Lakeside tipi","Décoration de porche d'automne":"Fall porch decor","Composition citrouilles et chrysanthèmes":"Pumpkin & mums display","Mise en place de la table de fête":"Festive table setting"};
+var RATE=1.38,cart={},cat='Tout';
+var P=[
+["Plats","Dinde rôtie farcie","Dinde entière dorée et farcie, servie avec haricots verts et sauce aux canneberges. Pour 8 à 10 personnes.",89,"lo","55% 45%"],
+["Plats","Buffet complet Thanksgiving","Dinde, farce, purée, haricots verts et pommes rôties. Menu complet pour 8 personnes.",249,"buffet","40% 60%"],
+["Plats","Purée et haricots verts","Purée maison crémeuse et haricots verts croquants, pour 6 personnes.",34,"buffet","5% 90%"],
+["Plats","Farce aux herbes","Farce dorée au pain, herbes et légumes, cuite au four. Pour 6 personnes.",28,"diner","12% 30%"],
+["Plats","Menu dîner pour deux","Tranches de dinde, salade verte, olives et sauce aux canneberges, dressés pour un dîner à deux.",39,"vin","30% 70%"],
+["Plats","Sauce aux canneberges","Sauce maison aux canneberges, sucrée et acidulée, pour accompagner la dinde. Pour 6 personnes.",12,"diner","50% 68%"],
+["Desserts","Trifle épicé au speculoos","Couches de gâteau, crème aux épices et biscuits croquants dans un grand verre à pied.",24,"dessert","50% 50%"],
+["Desserts","Mini-gâteaux chocolat et caramel","Six petits gâteaux au chocolat garnis de crème caramel au beurre.",18,"gateau","50% 35%"],
+["Desserts","Tarte à la citrouille","Tarte à la citrouille garnie de crème fouettée et d'épices. Pour 8 parts.",22,"gateau2","50% 50%"],
+["Desserts","Muffins aux noix et canneberges","Six muffins moelleux aux noix et aux canneberges séchées, avec un peu de sirop d'érable.",16,"dessert2","50% 50%"],
+["Boissons","Cocktails d'automne (x4)","Cidre épicé, orange, canneberges et romarin. Verres de fête prêts à servir.",32,"boissons","50% 50%"],
+["Boissons","Sangria festive orange-canneberge","Boisson fruitée aux tranches d'orange, canneberges et romarin frais. Pour 4 verres.",28,"jus","50% 50%"],
+["Boissons","Vins de table (2 bouteilles)","Un vin rouge et un vin blanc pour accompagner la dinde et le repas de fête.",38,"vin","65% 35%"],
+["Fruits","Panier de fruits d'automne","Poires, pommes, oranges, noix et confiture dans un panier tressé à offrir.",45,"fruits","50% 50%"],
+["Appartements","Chalet avec vue sur la montagne","Séjour en bois avec grande baie vitrée, cheminée et table pour huit. La nuit.",180,"appart","50% 50%"],
+["Appartements","Chalet d'automne au bord du lac","Chalet en bois entouré de feuillages rouges et dorés, avec table dressée dehors et vue sur le lac. La nuit.",210,"appartement","50% 50%"],
+["Appartements","Tipi au bord de l'eau","Tipi éclairé de lanternes au bord du lac, pour une nuit calme en pleine nature. La nuit.",95,"appart2","50% 50%"],
+["Décoration","Décoration de porche d'automne","Couronne de tournesols, citrouilles, bottes de paille, épouvantails et tableau d'accueil. Service complet.",120,"deco","50% 50%"],
+["Décoration","Composition citrouilles et chrysanthèmes","Tonneaux en bois, chrysanthèmes jaunes et citrouilles pour l'entrée de la maison. Service.",65,"deco","15% 90%"],
+["Décoration","Mise en place de la table de fête","Nappe blanche, bougies, verres ambrés et petits décors d'automne pour votre table. Service.",150,"diner","50% 50%"]
+];
+var CI={"Tout":"Thanksgiving approche : trouvez ici tout ce qu'il faut pour célébrer la fête.","Plats":"Le repas principal, à commander pour 6 à 10 personnes.","Desserts":"Des desserts de fête à partager en fin de repas.","Boissons":"Des boissons d'automne, fruitées et épicées, pour accompagner le repas.","Fruits":"Des paniers de fruits de saison, à offrir ou à poser sur la table.","Appartements":"Des logements pour les visiteurs qui passent Thanksgiving sur place. Prix par nuit.","Décoration":"Des services pour habiller votre maison et votre table. Prix par prestation."};
+var CATS=["Tout","Plats","Desserts","Boissons","Fruits","Appartements","Décoration"];
+function usd(v){return "$"+v.toFixed(2).replace(/\.00$/,"")}
+function cad(v){return "$"+(v*RATE).toFixed(2)}
+function draw(){
+ tabs.innerHTML=CATS.map(function(c){return '<button class="'+(c==cat?'on':'')+'" onclick="setCat(\''+c+'\')">'+c+'</button>'}).join("");
+ ci.textContent=CI[cat];
+ grid.innerHTML=P.map(function(p,i){if(cat!="Tout"&&p[0]!=cat)return"";
+  return '<article class="p" data-i="'+i+'"><div class="ph"><img alt="'+p[1]+'" src="'+IMG[p[4]]+'" style="object-position:'+p[5]+'"></div><div class="tag">'+p[0]+'</div><h3>'+p[1]+'</h3><em class="en2">'+(EN[p[1]]||"")+'</em><p>'+p[2]+'</p><div class="pr">'+usd(p[3])+' USD<small>'+cad(p[3])+' CAD</small></div><button class="btn" onclick="add('+i+')">Ajouter au panier</button></article>'}).join("");
+}
+function setCat(c){cat=c;draw()}
+function add(i){cart[i]=(cart[i]||0)+1;upd();toast(P[i][1]+" ajouté au panier ✓ Yum!");sfx("add");cartBtn.classList.remove("pop");void cartBtn.offsetWidth;cartBtn.classList.add("pop");var b=event&&event.target;fly(b);if(b&&b.tagName=="BUTTON"){b.textContent="Ajouté ✓";setTimeout(function(){b.textContent="Ajouter au panier"},1100)}}
+function ch(i,d){cart[i]+=d;if(cart[i]<1)delete cart[i];upd()}
+function tog(){drawer.classList.toggle("open");bk.classList.toggle("on",drawer.classList.contains("open"))}
+function upd(){
+ var k=Object.keys(cart),t=0,c=0;
+ k.forEach(function(i){c+=cart[i];t+=cart[i]*P[i][3]});
+ n.textContent=c;
+ items.innerHTML=k.length?k.map(function(i){return '<div class="it"><span>'+P[i][1]+'<br><small>'+usd(P[i][3])+' USD · '+cad(P[i][3])+' CAD</small></span><span><button onclick="ch('+i+',-1)" aria-label="Retirer une unité">−</button> '+cart[i]+' <button onclick="ch('+i+',1)" aria-label="Ajouter une unité">+</button></span></div>'}).join(""):"<p>Votre panier est vide. Ajoutez un plat, un dessert ou un séjour.</p>";
+ tot.innerHTML=k.length?'Total : '+usd(t)+' USD<br>'+cad(t)+' CAD':"";
+}
+hbg.style.backgroundImage="url("+IMG.buffet+")";document.getElementById("decor").style.setProperty("--deco","url("+IMG.deco+")");
+rt.textContent=RATE.toFixed(2);
+var RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,d=+(el.dataset.d||0);el.style.transitionDelay=d+"ms";el.classList.add("in");io.unobserve(el);setTimeout(function(){el.style.transitionDelay="0ms"},d+900)})},{threshold:.12});
+function reveal(){document.querySelectorAll(".head,.box,.st,.ci,.tabs,.f,.fs,.vc,.quiz,#grid .p").forEach(function(el){if(el.dataset.s)return;el.dataset.s=1;el.classList.add("rv");var k=Array.prototype.indexOf.call(el.parentNode.children,el);el.dataset.d=Math.min(k,8)*90;io.observe(el)})}
+var _d=draw;draw=function(){_d();reveal()};
+addEventListener("scroll",function(){var h=document.documentElement,m=h.scrollHeight-innerHeight;bar.style.width=(m>0?scrollY/m*100:0)+"%";document.querySelector("nav").classList.toggle("s",scrollY>10)},{passive:true});
+var hh=document.querySelector(".hero h1");hh.innerHTML=hh.textContent.split(" ").map(function(w,i){return '<span class="w" style="--i:'+i+'">'+w+'</span>'}).join(" ");
+if(!RM){var L=["🍂","🍁","🍃"];for(var i=0;i<18;i++){var s=document.createElement("span");s.textContent=L[i%3];s.style.cssText="left:"+Math.random()*100+"%;font-size:"+(16+Math.random()*24)+"px;animation-duration:"+(9+Math.random()*10)+"s;animation-delay:"+(-Math.random()*16)+"s";leaves.appendChild(s)}}
+var M="🦃 Joyeux Thanksgiving ✦ Happy Thanksgiving ✦ Give thanks ✦ Tarte à la citrouille ✦ Pumpkin pie ✦ Gobble gobble ✦ Chalets d'automne ✦ ";
+track.innerHTML="<span>"+M+M+"</span><span>"+M+M+"</span>";
+function cd(){document.querySelectorAll(".tm").forEach(function(e){var s=Math.max(0,Math.floor((new Date(e.dataset.t)-Date.now())/1000)),v=[Math.floor(s/86400),Math.floor(s%86400/3600),Math.floor(s%3600/60),s%60],b=e.querySelectorAll("b");v.forEach(function(x,i){if(b[i].textContent!=x)b[i].textContent=x})})}cd();setInterval(cd,1000);
+var M2="✦ Merci · Thank you ✦ Famille · Family ✦ Partage · Sharing ✦ Récolte · Harvest ✦ ";track2.innerHTML="<span>"+M2+M2+M2+"</span><span>"+M2+M2+M2+"</span>";
+function favs(){fav.innerHTML=["Dinde rôtie farcie","Tarte à la citrouille","Chalet d'automne au bord du lac"].map(function(n){var i=P.findIndex(function(p){return p[1]==n}),p=P[i];return '<article class="f"><div class="fi"><img alt="'+p[1]+'" src="'+IMG[p[4]]+'" style="object-position:'+p[5]+'"></div><div class="ft"><span class="tag">'+p[0]+'</span><h3>'+p[1]+'</h3><em class="en2">'+(EN[p[1]]||"")+'</em><p>'+p[2]+'</p><div class="pr">'+usd(p[3])+' USD · '+cad(p[3])+' CAD</div><button class="btn" onclick="add('+i+')">Ajouter au panier</button></div></article>'}).join("")}favs();
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("act",a.getAttribute("href")=="#"+e.target.id)})})},{rootMargin:"-45% 0px -50% 0px"});
+["histoire","favoris","boutique","english","arbre","etapes","decor"].forEach(function(id){so.observe(document.getElementById(id))});
+var hw=document.querySelector(".hero .wrap");addEventListener("scroll",function(){if(scrollY<innerHeight&&!RM){hw.style.transform="translateY("+scrollY*.28+"px)";hw.style.opacity=Math.max(0,1-scrollY/(innerHeight*.8))}},{passive:true});
+document.addEventListener("mousemove",function(e){var f=e.target.closest?e.target.closest(".fi,.sc2"):null;document.querySelectorAll(".fi.t,.sc2.t").forEach(function(x){if(x!=f){x.classList.remove("t");x.style.transform=""}});if(!f||RM)return;var r=f.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;f.classList.add("t");f.style.transform="perspective(700px) rotateY("+x*10+"deg) rotateX("+(-y*10)+"deg) scale(1.03)"});
+function toast(m){ts.textContent=m;ts.classList.add("on");clearTimeout(toast.h);toast.h=setTimeout(function(){ts.classList.remove("on")},2600)}
+function fly(b){if(RM||!b)return;var r=b.getBoundingClientRect(),c=cartBtn.getBoundingClientRect(),d=document.createElement("div");d.className="fly";d.style.left=(r.left+r.width/2)+"px";d.style.top=r.top+"px";document.body.appendChild(d);requestAnimationFrame(function(){d.style.transform="translate("+(c.left+c.width/2-r.left-r.width/2)+"px,"+(c.top-r.top)+"px) scale(.3)";d.style.opacity=".3"});setTimeout(function(){d.remove()},800)}
+function party(){sfx("party");toast("Merci ! Thank you! Le paiement en ligne sera ajouté bientôt.");if(RM)return;for(var i=0;i<34;i++){var s=document.createElement("span");s.className="cf";s.textContent=["🍂","🍁","🎃","🦃","✨"][i%5];s.style.left=(30+Math.random()*40)+"vw";s.style.setProperty("--x",(Math.random()*80-40)+"vw");s.style.setProperty("--y",(-30-Math.random()*50)+"vh");s.style.animationDelay=Math.random()*.3+"s";document.body.appendChild(s);setTimeout(function(e){e.remove()},2700,s)}}
+function openM(i){var p=P[i];mi.src=IMG[p[4]];mi.style.objectPosition=p[5];mi.alt=p[1];mg.textContent=p[0];mh.textContent=p[1];mp.textContent=p[2];mr.innerHTML=usd(p[3])+" USD<small>"+cad(p[3])+" CAD</small>";ma.onclick=function(){cm();add(i)};md.classList.add("on");sfx("open")}
+function cm(){md.classList.remove("on")}
+grid.addEventListener("click",function(e){var c=e.target.closest(".p");if(c&&!e.target.closest("button"))openM(+c.dataset.i)});
+addEventListener("keydown",function(e){if(e.key=="Escape"){cm();drawer.classList.remove("open");bk.classList.remove("on")}});
+var V=[["Turkey","la dinde","🦃"],["Pumpkin pie","la tarte à la citrouille","🥧"],["Stuffing","la farce","🍞"],["Cranberry sauce","la sauce aux canneberges","🍒"],["Harvest","la récolte","🌾"],["Grateful","reconnaissant","🙏"],["Gravy","la sauce au jus","🥣"],["Leftovers","les restes","🍽️"]];
+cards.innerHTML=V.map(function(v,i){return '<div class="vc" data-i="'+i+'"><div class="vi"><div class="vf"><span>'+v[2]+'</span><b>'+v[0]+'</b><button class="sp" aria-label="Écouter '+v[0]+'">🔊</button></div><div class="vb">'+v[1]+'</div></div></div>'}).join("");
+function say(x){try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(x);u.lang="en-US";u.rate=.85;speechSynthesis.speak(u)}catch(e){}}
+cards.addEventListener("click",function(e){var c=e.target.closest(".vc");if(!c)return;if(e.target.closest(".sp")){say(V[+c.dataset.i][0]);return}c.classList.toggle("on");sfx("flip")});
+var qs,qi,sc;function sh(a){return a.slice().sort(function(){return Math.random()-.5})}
+function qstart(){qs=sh(V).slice(0,5);qi=0;sc=0;qnext()}
+function qnext(){if(qi>=5){quiz.innerHTML='<h3>'+(sc>=4?"Excellent ! Well done 🎉":sc>=2?"Bien joué ! Good job 👏":"Continuez ! Keep going 💪")+'</h3><p>Score : '+sc+' / 5</p><button class="btn" onclick="qstart()">Rejouer · Play again</button>';return}
+var q=qs[qi],o=sh(sh(V.filter(function(v){return v!=q})).slice(0,2).concat([q]));
+quiz.innerHTML='<div class="qh">Quiz · Question '+(qi+1)+' / 5</div><h3>Comment dit-on « '+q[1]+' » en anglais ?</h3><div class="qo">'+o.map(function(v){return '<button data-a="'+(v==q?1:0)+'">'+v[0]+'</button>'}).join("")+'</div>'}
+quiz.addEventListener("click",function(e){var b=e.target.closest(".qo button");if(!b||b.parentNode.dataset.d)return;b.parentNode.dataset.d=1;var ok=b.dataset.a=="1";if(ok)sc++;b.classList.add(ok?"ok":"ko");sfx(ok?"ok":"ko");if(!ok)b.parentNode.querySelector('[data-a="1"]').classList.add("ok");qi++;setTimeout(qnext,1200)});
+qstart();
+hero.addEventListener("mousemove",function(e){var r=hero.getBoundingClientRect();spot.style.setProperty("--mx",(e.clientX-r.left)+"px");spot.style.setProperty("--my",(e.clientY-r.top)+"px")});
+var AC,OUT,MG,SG,NB,on=false,tm=0,bn=0,nextBar=0;
+var CH=[[48,52,55],[45,48,52],[41,45,48],[43,47,50]];
+var ML=[[[0,76,3],[4,74,2],[6,72,2]],[[0,69,3],[4,72,2],[6,76,2]],[[0,77,3],[4,76,2],[6,72,2]],[[0,74,4],[4,71,2],[6,74,2]],[[0,79,3],[4,76,2],[6,72,2]],[[0,76,3],[4,74,2],[6,69,2]],[[0,72,2],[2,74,2],[4,77,2],[6,76,2]],[[0,74,6]]];
+function hz(m){return 440*Math.pow(2,(m-69)/12)}
+function initAudio(){if(AC)return;AC=new(window.AudioContext||window.webkitAudioContext)();OUT=AC.createGain();OUT.gain.value=0;var cp=AC.createDynamicsCompressor();OUT.connect(cp);cp.connect(AC.destination);MG=AC.createGain();MG.gain.value=1;SG=AC.createGain();SG.connect(OUT);MG.connect(OUT);
+var cv=AC.createConvolver(),n=AC.sampleRate*2.6,b=AC.createBuffer(2,n,AC.sampleRate);for(var c=0;c<2;c++){var d=b.getChannelData(c);for(var i=0;i<n;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/n,2.6)}cv.buffer=b;var w=AC.createGain();w.gain.value=.4;MG.connect(cv);SG.connect(cv);cv.connect(w);w.connect(OUT);
+NB=AC.createBuffer(1,AC.sampleRate*.05,AC.sampleRate);var nd=NB.getChannelData(0);for(var k=0;k<nd.length;k++)nd[k]=(Math.random()*2-1)*Math.pow(1-k/nd.length,3)}
+function note(f,t,d,type,v,att,dest){var o=AC.createOscillator(),g=AC.createGain();o.type=type;o.frequency.value=f;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+(att||.02));g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(dest||MG);o.start(t);o.stop(t+d+.05)}
+function sched(){var e=.375;while(nextBar<AC.currentTime+1.5){var ch=CH[bn%4],t=nextBar;
+note(hz(ch[0]-12),t,2.9,"triangle",.17,.05);
+ch.forEach(function(m){note(hz(m+12),t,3.1,"sine",.045,.7)});
+[0,1,2,1,2,1,0,1].forEach(function(x,i){note(hz(ch[x]+24),t+i*e,1,"triangle",.05,.01)});
+ML[bn%8].forEach(function(x){note(hz(x[1]),t+x[0]*e,x[2]*e+.25,"sine",.085,.03)});
+for(var k=0;k<7;k++){var s=AC.createBufferSource(),g=AC.createGain(),f=AC.createBiquadFilter();s.buffer=NB;f.type="highpass";f.frequency.value=1800+Math.random()*2500;g.gain.value=.02+Math.random()*.05;s.connect(f);f.connect(g);g.connect(OUT);s.start(t+Math.random()*3)}
+bn++;nextBar+=8*e}}
+function music(v){initAudio();AC.resume();on=v;OUT.gain.setTargetAtTime(v?2.6:0,AC.currentTime,.35);clearInterval(tm);tm=0;if(v){nextBar=AC.currentTime+.15;sched();tm=setInterval(sched,400)}snd.classList.toggle("on",v)}
+function sfx(k){if(!on||!AC)return;try{var t=AC.currentTime,q=function(m,dt,d,ty,v){note(hz(m),t+dt,d,ty,v,.005,SG)};
+if(k=="add"){q(84,0,.5,"sine",.12);q(88,.09,.6,"sine",.1)}else if(k=="ok"){q(79,0,.7,"triangle",.1);q(83,.08,.7,"triangle",.1);q(86,.16,.9,"triangle",.1)}else if(k=="ko"){q(48,0,.35,"sawtooth",.05)}else if(k=="flip"){q(91,0,.25,"sine",.07)}else if(k=="open"){q(72,0,.4,"triangle",.08)}else if(k=="party"){[72,76,79,84,88].forEach(function(m,i){q(m,i*.09,1.2,"triangle",.11)})}}catch(e){}}
+function enter(s){splash.classList.add("out");for(var i=0;i<46;i++){var e=document.createElement("span");e.className="bst";e.textContent=["🍂","🍁","🎃","🦃","✨","🌽"][i%6];e.style.setProperty("--x",(Math.random()*130-65)+"vw");e.style.setProperty("--y",(Math.random()*120-60)+"vh");e.style.animationDelay=Math.random()*.25+"s";document.body.appendChild(e);setTimeout(function(x){x.remove()},2200,e)}document.body.classList.remove("lock");document.body.classList.add("in");if(s)music(true)}
+go.onclick=function(){enter(1)};nogo.onclick=function(){enter(0)};
+snd.onclick=function(){music(!on)};
+var cx=0,cy=0,tx=0,ty=0;addEventListener("mousemove",function(e){tx=e.clientX;ty=e.clientY;cur.classList.toggle("h",!!(e.target.closest&&e.target.closest("a,button,.p,.vc,.fi")))});
+(function l(){cx+=(tx-cx)*.2;cy+=(ty-cy)*.2;cur.style.left=cx+"px";cur.style.top=cy+"px";requestAnimationFrame(l)})();
+var mb=null;document.addEventListener("mousemove",function(e){var b=e.target.closest?e.target.closest(".btn,#cartBtn"):null;if(mb&&mb!=b){mb.style.transform="";mb=null}if(!b||RM)return;mb=b;var r=b.getBoundingClientRect();b.style.transform="translate("+((e.clientX-r.left-r.width/2)*.22)+"px,"+((e.clientY-r.top-r.height/2)*.32)+"px)"});
+var LM=["Preparing the feast…","Roasting the turkey…","Baking the pumpkin pie…","Setting the table…","Ready! Bon appétit 🦃"],li=0,lt=setInterval(function(){li++;if(li>=LM.length){clearInterval(lt);return}lm.textContent=LM[li]},620);
+var SL=[["buffet","Give thanks","La fête de la gratitude","On remercie pour les récoltes et on se réunit en famille autour d'un grand repas.","Thanks"],
+["lo","Fourth Thursday","États-Unis","Quatrième jeudi de novembre, fixé par le Congrès en 1941. Le lendemain, le Black Friday ouvre la saison des achats de fin d'année.","26 nov."],
+["appartement","Second Monday","Canada","Deuxième lundi d'octobre, jour férié depuis 1957. La fête tombe plus tôt, à la fin des récoltes d'un pays plus nordique.","12 oct."],
+["diner","On the menu","Au menu","Dinde rôtie, farce, purée, haricots verts, sauce aux canneberges, tarte à la citrouille et boissons d'automne.","Yum!"],
+["appart2","Newfoundland","Terre-Neuve","L'explorateur Martin Frobisher et son équipage rendent grâce après une traversée difficile. C'est l'un des premiers repas d'action de grâce d'Amérique du Nord.","1578"],
+["fruits","First harvest","Plymouth","Après une première récolte, des colons partagent un repas avec des Wampanoags. Ce récit est devenu le symbole des premiers Thanksgivings américains.","1621"],
+["gateau2","Abraham Lincoln","Un jour national","Pendant la guerre de Sécession, le président Lincoln proclame un jour national d'action de grâce, fixé au dernier jeudi de novembre.","1863"],
+["deco","Still going strong","Aujourd'hui","Défilé de Macy's, football, retrouvailles familiales : les visiteurs louent des logements et les restaurants proposent des menus de fête.","Today"]];
+var si=-1,man=false,hov=false,vis=false;
+sslides.innerHTML=SL.map(function(s){return '<div class="sl"><div class="tx"><div class="sy a a1'+(s[4].length>5?' s':'')+'">'+s[4]+'</div><div class="en a a2">'+s[1]+'</div><h3 class="a a3">'+s[2]+'</h3><p class="a a4">'+s[3]+'</p></div><div class="sc2 a a2"><img alt="'+s[2]+'" src="'+IMG[s[0]]+'"></div></div>'}).join("");
+sbars.innerHTML=SL.map(function(){return "<i><b></b></i>"}).join("");
+function upz(){story.classList.toggle("pz",man||hov||!vis)}
+function go(n,q){n=(n+SL.length)%SL.length;var sl=sslides.children,bs=sbars.children;for(var k=0;k<sl.length;k++){sl[k].classList.remove("prev","on");if(k==si)sl[k].classList.add("prev");bs[k].className=k<n?"done":""}
+bs[n].className="on";sl[n].classList.add("on");si=n;if(!q)sfx("flip")}
+sbars.addEventListener("animationend",function(e){if(e.target.parentNode.classList.contains("on"))go(si+1)});
+spv.onclick=function(){go(si-1)};snx.onclick=function(){go(si+1)};
+spa.onclick=function(){man=!man;spa.textContent=man?"▶ Lecture":"❚❚ Pause";upz()};
+story.onmouseenter=function(){hov=true;upz()};story.onmouseleave=function(){hov=false;upz()};
+var sx=0;story.addEventListener("touchstart",function(e){sx=e.touches[0].clientX},{passive:true});story.addEventListener("touchend",function(e){var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)go(si+(d<0?1:-1))});
+new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis&&si<0)go(0,1);upz()},{threshold:.35}).observe(story);
+function mini(i){var p=P[i];return '<button class="mini" onclick="openM('+i+')"><img alt="" src="'+IMG[p[4]]+'" style="object-position:'+p[5]+'"><span>'+p[1]+'</span><b>'+usd(p[3])+' · '+cad(p[3])+' CAD</b></button>'}
+var RA=[],RB=[];P.forEach(function(p,i){(i%2?RB:RA).push(i)});
+r1.innerHTML=RA.map(mini).join("")+RA.map(mini).join("");r2.innerHTML=RB.map(mini).join("")+RB.map(mini).join("");
+var TN=["La famille · Family","La santé · Health","Les amis · Friends","Un bon repas · Good food","La paix · Peace","Mes rêves · My dreams","Le soleil · Sunshine"];
+function leaf(x,init){var l=document.createElement("span");l.className="lf";l.textContent="🍂 "+x;l.style.left=(16+Math.random()*68)+"%";l.style.top=(9+Math.random()*44)+"%";l.style.setProperty("--r",(Math.random()*16-8)+"deg");if(init){var d=Math.random()*1.3;l.style.animationDelay=d+"s,"+(d+1.2)+"s"}tv.appendChild(l);while(tv.querySelectorAll(".lf").length>28)tv.querySelector(".lf").remove()}
+TN.forEach(function(x){leaf(x,1)});
+function addLeaf(){var v=ti.value.trim();if(!v)return;leaf(v.slice(0,40));ti.value="";sfx("ok");toast("Merci ! Votre feuille est sur l'arbre 🍂 Thank you!")}
+tb.onclick=addLeaf;ti.addEventListener("keydown",function(e){if(e.key=="Enter")addLeaf()});
+draw();upd();
+</script>
+</body>
+</html>
